@@ -1,23 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
-import {InnerLayout} from '../styles/Layouts'
-import Title from './Title';
-import ServiceCard from './ServiceCard';
+import React from 'react';
+import styled from 'styled-components';
+import {InnerLayout} from '../styles/Layouts';
+import Title from '../Components/Title';
+import ServiceCard from '../Components/ServiceCard';
 import design from '../img/design.svg';
 import intelligence from '../img/intelligence.svg';
 import gamedev from '../img/game-dev.svg';
-function ServicesSection () {
+
+function ServicesSection() {
     return (
         <InnerLayout>
             <ServicesSectionStyled>
-            <Title title={'Servicios'} span={'Servicios'}/>
-            <div className="services">
-            <ServiceCard 
-            image={design} 
-            title={'Web Design'} 
-            paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
-            />
-             <div className="mid-card">
+                <Title title={'Services'} span={'services'} />
+                <div className="services">
+                    <ServiceCard 
+                        image={design} 
+                        title={'Web Design'} 
+                        paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
+                    />
+                    <div className="mid-card">
                         <ServiceCard 
                             image={intelligence} 
                             title={'Artificial Intelligence'} 
@@ -29,14 +30,14 @@ function ServicesSection () {
                         title={'Game Development'} 
                         paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                     />
-            </div>
+                </div>
             </ServicesSectionStyled>
         </InnerLayout>
     )
 }
 
-const ServicesSectionStyled = styled.div`
- .services{
+const ServicesSectionStyled = styled.section`
+    .services{
         margin-top: 5rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -52,7 +53,6 @@ const ServicesSectionStyled = styled.div`
         }
        
     }
-
-
 `;
-export default ServicesSection
+
+export default ServicesSection;

@@ -1,51 +1,40 @@
-import React from "react";
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import avatar from "../img/avatar2.jpg";
-const Navigation = () => {
-  return (
-    <NavigationStyled>
-      <div className="avatar">
-        <img src={avatar} alt="" />
-      </div>
-      <ul className="nav-items">
-        <li className="nav-items">
-          <NavLink to="/" activeClassName="active-class" exact>
-            Inicio
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/about" activeClassName="active-class" exact>
-          Acerca de mí
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/resume" activeClassName="active-class" exact>
-            Resume
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/portafolios" activeClassName="active-class" exact>
-            Portafolio
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/blog" activeClassName="active-class" exact>
-            Blogs
-          </NavLink>
-        </li>
-        <li className="nav-items">
-          <NavLink to="/contact" activeClassName="active-class" exact>
-            Contacto
-          </NavLink>
-        </li>
-      </ul>
-      <footer className="footer">
-        <p>@2021 Mí Portafolio Website</p>
-      </footer>
-    </NavigationStyled>
-  );
-};
+import React from 'react'
+import styled from 'styled-components';
+import {NavLink} from 'react-router-dom';
+import avatar from '../img/avatar.jpg';
+
+function Navigation() {
+    return (
+        <NavigationStyled>
+            <div className="avatar">
+                <img src={avatar} alt=""/>
+            </div>
+            <ul className="nav-items">
+                <li className="nav-item">
+                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
+                </li>
+            </ul>
+            <footer className="footer">
+                <p>@2021 <b>Lorem Ipsum</b></p>
+            </footer>
+        </NavigationStyled>
+    )
+}
 
 const NavigationStyled = styled.nav`
     display: flex;
@@ -66,6 +55,7 @@ const NavigationStyled = styled.nav`
             border: 8px solid var(--border-color);
         }
     }
+
     .nav-items{
         width: 100%;
         text-align: center;
@@ -101,12 +91,14 @@ const NavigationStyled = styled.nav`
                     z-index: -1;
                 }
             }
+
             a:hover::before{
                 width: 100%;
                 height: 100%;
             }
         }
     }
+
     footer{
         border-top: 1px solid var(--border-color);
         width: 100%;

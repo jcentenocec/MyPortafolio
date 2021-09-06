@@ -1,20 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-function ServiceCard ({image,title,paragraph}) {
+function ServiceCard({image, title, paragraph}) {
     return (
-        <ServiceCardStyled>
+        <ServiceCardStyled >
             <div className="container">
                 <img src={image} alt=""/>
                 <h4>{title}</h4>
                 <p>{paragraph}</p>
             </div>
-            
-        </ServiceCardStyled>
+        </ServiceCardStyled >
     )
 }
+
 const ServiceCardStyled = styled.div`
-background-color: var(--background-dark-grey);
+    background-color: var(--background-dark-grey);
     border-left: 1px solid var(--border-color);
     border-top: 8px solid var(--border-color);
     border-right: 1px solid var(--border-color);
@@ -24,7 +24,7 @@ background-color: var(--background-dark-grey);
         border-top: 8px solid var(--primary-color);
         transform: translateY(3px);
     }
-.container{
+    .container{
         padding: 1.2rem;
         h4{
             color: var(--white-color);
@@ -42,10 +42,11 @@ background-color: var(--background-dark-grey);
                 border-radius: 10px;
             }
         }
+
         p{
             padding: .8rem 0;
         }
-}
+    }
 `;
 
-export default ServiceCard
+export default ServiceCard;

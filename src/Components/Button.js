@@ -1,15 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-function Button ({filter,button}) {
+function Button({filter, button}) {
     return (
         <ButtonsStyled>
             {
-                button.map((but,i)=>{
-                    return <ButtonStyled key={i} onClick={() => filter(but)}>                        
+                button.map((but, i) =>{
+                    return <ButtonStyled key={i} onClick={() => filter(but)}>
                         {but}
                     </ButtonStyled>
-
                 })
             }
         </ButtonsStyled>
@@ -32,6 +31,7 @@ const ButtonStyled = styled.button`
     &:hover{
         background-color: var(--primary-color);
     }
+
     &:not(:last-child){
         margin-right: .6rem;
     }

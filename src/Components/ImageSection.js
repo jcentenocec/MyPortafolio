@@ -2,36 +2,40 @@ import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/resume.jpg';
 import PrimaryButton from './PrimaryButton';
-function ImageSection () {
+
+function ImageSection() {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={resume} alt="aqui va una imagen" />
+                <img src={resume} alt=""/>
             </div>
             <div className="right-content">
-                <h4>Soy <span>Jesus Centeno </span></h4>
+                <h4>I am <span>Lorem Ipsum</span></h4>
                 <p className="paragraph">
-                Soy un ingeniero en tecnología de la información y comunicación recién egresado y 
-                también soy un desarrollador de software con conocimiento en múltiples lenguajes de programación,
-                     
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, natus quas vero enim 
+                    praesentium delectus est id fugiat ab libero adipisci recusandae at maxime veritatis! 
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, nesciunt.
+                    
                 </p>
                 <div className="about-info">
                     <div className="info-title">
-                        <p>Nombre </p>
-                        <p>Edad</p>
-                        <p>Nacionalidad</p>
-                        <p>idiomas</p>
-                        <p>ubicación</p>
+                        <p>Full Name</p>
+                        <p>Age</p>
+                        <p>Nationality </p>
+                        <p>Languages </p>
+                        <p>Location</p>
+                        <p>Service</p>
                     </div>
                     <div className="info">
-                        <p>: Jesus Guadalupe Centeno Centeno</p>
-                        <p>: 27</p>
-                        <p>: Mexicano </p>
-                        <p>: Español,English </p>
-                        <p>: Cancún,Quinta Roo</p>
+                        <p>: Lorem Ipsum</p>
+                        <p>: 36</p>
+                        <p>: Spainsh </p>
+                        <p>: Spanish, French, English </p>
+                        <p>: London, United Kingdom</p>
+                        <p>: Freelance</p>
                     </div>
                 </div>
-                 <PrimaryButton title={'Download Cv'} /> 
+                <PrimaryButton title={'Download Cv'} />
             </div>
         </ImageSectionStyled>
     )
